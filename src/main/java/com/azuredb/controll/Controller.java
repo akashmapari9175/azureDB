@@ -38,7 +38,7 @@ public class Controller {
 	}
 	
 	@GetMapping("/emp/{id}")
-	public Employee getEmp(@PathVariable int id) {
+	public Employee getEmp(@PathVariable("id") int id) {
 		Employee emp = repo.findById(id).get();
 		return emp;
 	}
